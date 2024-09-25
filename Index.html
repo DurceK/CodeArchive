@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exibir Fieldset</title>
+  <style>
+    /* O fieldset começa escondido */
+    #meuFieldset {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Botão que vai exibir o fieldset -->
+  <button onclick="mostrarFieldset()">Mostrar Fieldset</button>
+
+  <!-- Fieldset escondido -->
+  <fieldset id="meuFieldset">
+    <legend>Informações Adicionais</legend>
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" name="nome"><br><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email"><br><br>
+  </fieldset>
+
+  <script>
+    // Função para exibir o fieldset
+    function mostrarFieldset() {
+      var fieldset = document.getElementById('meuFieldset');
+      if (fieldset.style.display === 'none') {
+        fieldset.style.display = 'block';
+      } else {
+        fieldset.style.display = 'none'; // Opcional: esconder de novo ao clicar
+      }
+    }
+  </script>
+
+</body>
+</html>
